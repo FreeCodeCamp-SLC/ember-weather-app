@@ -1,5 +1,5 @@
-<h1>Name of City</h1>
+<h1>{{if model.city model.city "Name of City"}}</h1>
 
-<p class="temperature">72</p>
-<p class="conditions">Current Conditions</p>
-{{!-- img --}}
+<p class="temperature">{{if model.temp model.temp "-"}}° </p>
+<p class="conditions">{{if model.description model.description "Conditions Not Available"}}</p>
+<img src={{model.icon}}>
